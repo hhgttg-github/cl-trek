@@ -3,6 +3,10 @@
 ;  ((x :initarg :x :accessor x)
 ;   (y :initarg :y :accessor y)))
 
+(defconstant +field-size+ 8)
+
+(defparameter *XY-modifier* '(0 0.4 0.7 0.9 1))
+
 ;;;;====================================
 
 (defclass enterprise ()
