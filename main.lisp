@@ -3,10 +3,17 @@
 ;  ((x :initarg :x :accessor x)
 ;   (y :initarg :y :accessor y)))
 
-(defconstant +field-size+ 8)
+(defconstant +field-wide+ 10)
+(defconstant +field-size+ (* +field-wide+ +field-wide+))
+(defconstant +field-last+ (1- +field-size+))
 
 (defparameter *XY-modifier* '(0 0.4 0.7 0.9 1))
 
+;;;;====================================
+
+(defparameter *quad* (make-array +field-size+))
+(defparameter *sec*  (make-array +field-size+))
+  
 ;;;;====================================
 
 (defclass enterprise ()
